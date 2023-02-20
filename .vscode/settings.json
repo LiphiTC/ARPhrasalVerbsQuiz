@@ -1,0 +1,7 @@
+{
+    "files.exclude":
+    {
+
+    },
+    "omnisharp.useModernNet": false
+}

@@ -1,0 +1,59 @@
+{
+    "Quizzes": [
+        {
+            "Verb": "Look Around",
+            "Answers": [
+                "Посмотерть назад",
+                "Посмотреть в стороны",
+                "Посмотреть на вверх",
+                "Посмотреть назад"
+            ],
+            "RightAnswer": "Посмотреть в стороны",
+            "PrefabName": "LookAround"
+        },
+        {
+            "Verb": "Jump On",
+            "Answers": [
+                "Прыгать вниз",
+                "Перепрыгнуть",
+                "Выпрыгнуть",
+                "Запрыгнуть"
+            ],
+            "RightAnswer": "Запрыгнуть",
+            "PrefabName": "JumpOn"
+        },
+        {
+            "Verb": "Jump Up",
+            "Answers": [
+                "Прыгать вверх",
+                "Перепрыгнуть",
+                "Запрыгнуть",
+                "Прыгать вниз"
+            ],
+            "RightAnswer": "Прыгать вверх",
+            "PrefabName": "JumpUp"
+        },
+        {
+            "Verb": "Grow Up",
+            "Answers": [
+                "Вырасти",
+                "Врасти",
+                "Зарости",
+                "Перерости"
+            ],
+            "RightAnswer": "Вырасти",
+            "PrefabName": "GrowUp"
+        },
+        {
+            "Verb": "Go Around",
+            "Answers": [
+                "Зайти",
+                "Выйти",
+                "Перейти",
+                "Обойти"
+            ],
+            "RightAnswer": "Обойти",
+            "PrefabName": "GrowUp"
+        }
+    ]
+}
