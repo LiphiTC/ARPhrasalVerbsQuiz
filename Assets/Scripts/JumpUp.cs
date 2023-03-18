@@ -12,7 +12,4 @@ public class JumpUp : MonoBehaviour
         animator.SetTrigger("Jump");
     }
 
-
-
-    
 }

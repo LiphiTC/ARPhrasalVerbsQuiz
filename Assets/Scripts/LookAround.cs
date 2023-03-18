@@ -13,7 +13,13 @@ public class LookAround : MonoBehaviour
     private float currentRotationSpeed = 0f;
     private float currentRotationAcceleration = 0f;
     private bool clockwise = true;
+    private GameManager _gameManager;
 
+
+    public void Start()
+    {
+        _gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
+    }
     void Update()
     {
         if (clockwise)
@@ -48,9 +54,10 @@ public class LookAround : MonoBehaviour
 
         // Check if we should change direction
         float currentAngle = transform.eulerAngles.y;
-        if (currentAngle < minRotationAngle || currentAngle > maxRotationAngle)
+        
+        if (currentAngle < _gameManager.TappedRotation.eulerAngles.y + minRotationAngle || currentAngle > _gameManager.TappedRotation.eulerAngles.y + maxRotationAngle)
         {
-            this.clockwise = !clockwise;
+            clockwise = !clockwise;
         }
     }
 }

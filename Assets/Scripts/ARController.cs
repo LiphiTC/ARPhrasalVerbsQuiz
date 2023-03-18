@@ -6,11 +6,14 @@ using UnityEngine.XR.ARFoundation;
 public class ARController : MonoBehaviour
 {
 
-    public GameObject ObjectToPlace;
+    public ARRaycastManager RayCastManager;    
+    private GameManager _gameManager;
 
-    public ARRaycastManager RayCastManager;
+    public void Start() {
+        _gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
+    }
 
-    // Update is called once per frame
+
     void Update()
     {
         if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began)
@@ -21,14 +24,11 @@ public class ARController : MonoBehaviour
 
             if (touches.Count != 0)
             {
-                ObjectToPlace.transform.SetPositionAndRotation(touches[0].pose.position, touches[0].pose.rotation);
-
-                ObjectToPlace.transform.Rotate(0, 180, 0);
-
-
+    
+                _gameManager.Tapped(touches[0].pose.position, touches[0].pose.rotation);
             }
         }
-
-
     }
+
+
 }
